@@ -1,0 +1,20 @@
+/* ctrl+shift+R to reload spotify */
+
+:root {
+	
+}
+
+#main {
+	overflow: hidden;
+    background-color: var(--spice-background);
+}
+
+/* Header when on playlist */
+.main-entityHeader-backgroundColor {
+    background-image: linear-gradient(0deg, var(--spice-background), transparent)
+}
+
+/* Home Header, when on home tab */
+.main-home-homeHeader {
+    background-image: linear-gradient(0deg, var(--spice-background), transparent)
+}
