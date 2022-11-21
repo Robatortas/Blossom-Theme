@@ -11,10 +11,16 @@
 
 /* Header when on playlist */
 .main-entityHeader-backgroundColor {
-    background-image: linear-gradient(0deg, var(--spice-background), transparent)
+    background-image: linear-gradient(10deg, var(--spice-background), transparent)
 }
 
 /* Home Header, when on home tab */
 .main-home-homeHeader {
-    background-image: linear-gradient(0deg, var(--spice-background), transparent)
+    background-color: unset;
+    background-image: linear-gradient(0deg, var(--spice-background), 90%, transparent)
+}
+
+/* What does this do? I'll find out tomorrow! */
+.main-topBar-background {
+    background-image: aqua;
 }
