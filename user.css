@@ -1,4 +1,4 @@
-/* ctrl+shift+R to reload spotify */
+/* Blossom Theme */
 
 :root {
 	
@@ -11,16 +11,101 @@
 
 /* Header when on playlist */
 .main-entityHeader-backgroundColor {
-    background-image: linear-gradient(10deg, var(--spice-background), transparent)
+    background-image: linear-gradient(10deg, var(--spice-background), 50%, transparent)
 }
 
 /* Home Header, when on home tab */
 .main-home-homeHeader {
-    background-color: unset;
-    background-image: linear-gradient(0deg, var(--spice-background), 90%, transparent)
+    background-color: rgba(0,0,0,0);
+    background-image: linear-gradient(0deg, var(--spice-background), 92%, transparent)
 }
 
-/* What does this do? I'll find out tomorrow! */
+.cover-art-image {
+    opacity: 80%;
+    border-radius: 7.5% 7.5% 0% 0%;
+}
+.cover-art-image:hover {
+    opacity: 100%;
+}
+
+/* Playback bar and controls */
+.main-nowPlayingBar-nowPlayingBar {
+    background-color: unset !important;
+    background: unset !important;
+    background-image: linear-gradient(0deg, var(--spice-player, 80%, transparent));
+    opacity: 70%;
+    transition: all 0.5s;
+}
+.main-nowPlayingBar-nowPlayingBar:hover {
+    transition: all 0.5s;
+    opacity: 100%;
+}
+
 .main-topBar-background {
-    background-image: aqua;
+    background-image: linear-gradient(0deg, var(--spice-player), 70%, transparent);
+    background: linear-gradient(180deg, rgb(34, 34, 34), 20%, transparent) !important;
+    backdrop-filter: blur(10px);
+}
+
+/*   
+.main-entityHeader-overlay {
+    background-color: var(--spice-player);
+} */
+
+.main-navBar-navBarLinkActive,
+.main-navBar-navBarLinkActive:focus,
+.logo {
+  background-color: var(--spice-player) !important;
+}
+
+.main-collectionLinkButton-collectionLinkButton {
+    color: #8d6594 !important;
+}
+
+
+/* LEFT BAR STUFF */
+
+/* Playlists text color */
+.main-rootlist-rootlistItemLink {
+    background-color: var(--spice-background);
+}
+.main-rootlist-rootlistItemLink:visited {
+    color: #ff00ff !important;
+  }
+
+.main-rootlist-rootlistDividerGradient {
+    background: linear-gradient(180deg, var(--spice-player), transparent);
+    visibility: hidden;
+}
+
+/* .main-rootlist-rootlistDivider {
+    background-color: #474747 !important;
+} */
+
+.main-rootlist-rootlistItemLinkActive {
+  color: #ffffff !important;
+}
+
+/* span.main-createPlaylistButton-text.standalone-ellipsis-one-line.main-type-mestoBold {
+    display: none;
+} */
+
+/* CARDS */
+
+.maim-card-defaultPlaceholder {
+    /* opacity: 10%; */
+    background: radial-gradient(ellipse at top, #ffffff, transparent);
+}
+
+/* Little filter for the cards */
+.main-card-card {
+    opacity: 100%;
+    background-color: unset !important;
+    background: linear-gradient(180deg, var(--spice-player), 65.0%, transparent);
+    transition: all 1s;
+}
+.main-card-card:hover {
+    opacity: 100%;
+    background-color: unset !important;
+    background: var(--spice-player)!important;
 }
