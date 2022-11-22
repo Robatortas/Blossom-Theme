@@ -9,24 +9,42 @@
     background-color: var(--spice-background);
 }
 
-/* Header when on playlist */
+/* header colored backgrounds */
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
 .main-entityHeader-backgroundColor {
-    background-image: linear-gradient(10deg, var(--spice-background), 50%, transparent)
+    background: linear-gradient(0deg, var(--spice-background) 40%, transparent) !important;
 }
+
+.main-entityHeader-headerText {
+    background: radial-gradient(ellipse at top right, var(--spice-player), var(--spice-background), transparent);
+}
+
 
 /* Home Header, when on home tab */
 .main-home-homeHeader {
-    background-color: rgba(0,0,0,0);
-    background-image: linear-gradient(0deg, var(--spice-background), 92%, transparent)
+    background-image: linear-gradient(0deg, var(--spice-background), 92%, transparent);
 }
 
 .cover-art-image {
-    opacity: 80%;
+    opacity: 90%;
     border-radius: 7.5% 7.5% 0% 0%;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 .cover-art-image:hover {
+    transition: all 0.5s;
     opacity: 100%;
 }
+
+/* Album or song art */
+.main-entityHeader-image {
+    border-radius: 10%;
+}
+
+.main-entityHeader-shadow {
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.200);
+  }
 
 /* Playback bar and controls */
 .main-nowPlayingBar-nowPlayingBar {
@@ -41,16 +59,27 @@
     opacity: 100%;
 }
 
-.main-topBar-background {
-    background-image: linear-gradient(0deg, var(--spice-player), 70%, transparent);
-    background: linear-gradient(180deg, rgb(34, 34, 34), 20%, transparent) !important;
-    backdrop-filter: blur(10px);
+.main-playPauseButton-button {
+    background: var(--spice-button-active);
+    color: var(--spice-text);
 }
 
-/*   
-.main-entityHeader-overlay {
-    background-color: var(--spice-player);
-} */
+/* TopBar, where the profile button and back and ford buttons are */
+.main-topBar-background {
+    opacity: 10%;
+    background: linear-gradient(180deg, #171717, 60%, transparent) !important;
+    /* background */
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
+}
+
+.main-topBar-overlay {
+    background: unset !important;
+    background-color: unset !important;
+    background-image: unset !important;
+    /* backdrop-filter: blur(10px); */
+}
 
 .main-navBar-navBarLinkActive,
 .main-navBar-navBarLinkActive:focus,
@@ -62,33 +91,34 @@
     color: #8d6594 !important;
 }
 
+.playback-bar {
+    float: left;
+    width: 100vw;
+    bottom: 67px;
+    position: relative;
+    cursor: pointer;
+  }
+
+.main-playbackBarRemainingTime-container {
+  /* position: absolute; */
+  /* top: 100px; */
+}
 
 /* LEFT BAR STUFF */
 
 /* Playlists text color */
-.main-rootlist-rootlistItemLink {
-    background-color: var(--spice-background);
-}
-.main-rootlist-rootlistItemLink:visited {
-    color: #ff00ff !important;
-  }
-
 .main-rootlist-rootlistDividerGradient {
-    background: linear-gradient(180deg, var(--spice-player), transparent);
     visibility: hidden;
 }
 
-/* .main-rootlist-rootlistDivider {
-    background-color: #474747 !important;
-} */
-
-.main-rootlist-rootlistItemLinkActive {
-  color: #ffffff !important;
+.main-rootlist-rootlistDivider {
+    visibility: hidden;
 }
 
-/* span.main-createPlaylistButton-text.standalone-ellipsis-one-line.main-type-mestoBold {
-    display: none;
-} */
+.main-rootlist-rootlist {
+    background-color: var(--spice-player);
+    top: 10px;
+}
 
 /* CARDS */
 
@@ -108,4 +138,25 @@
     opacity: 100%;
     background-color: unset !important;
     background: var(--spice-player)!important;
+}
+
+/* Cursor things */
+.main-playPauseButton-button,
+.main-repeatButton-button,
+.main-skipForwardButton-button,
+.main-skipBackButton-button,
+.main-shuffleButton-button {
+  cursor: pointer !important;
+}
+
+/* Search */
+input {
+    background-color: unset !important;
+    border-bottom: solid 1px var(--spice-button-active) !important;
+    color: var(--spice-text) !important;
+    border-radius: 0px !important;
+}
+
+.x-833-searchInput-searchInputSearchIcon {
+    color: var(--spice-text) !important;
 }
