@@ -1,9 +1,5 @@
 /* Blossom Theme */
 
-:root {
-	
-}
-
 #main {
 	overflow: hidden;
     background-color: var(--spice-background);
@@ -13,28 +9,30 @@
 .main-actionBarBackground-background,
 .main-entityHeader-overlay,
 .main-entityHeader-backgroundColor {
-    background: linear-gradient(0deg, var(--spice-background) 40%, transparent) !important;
+    background: linear-gradient(0deg, var(--spice-background) 10%, transparent) !important;
 }
 
-.main-entityHeader-headerText {
-    background: radial-gradient(ellipse at top right, var(--spice-player), var(--spice-background), transparent);
+.main-trackList-trackListHeaderStuck {
+    background: unset !important;
+    /* background */
+    backdrop-filter: blur(5px);
+    mask: linear-gradient(to bottom, #212121, 60%, transparent);
+    transition: all 1s;
 }
-
 
 /* Home Header, when on home tab */
 .main-home-homeHeader {
     background-image: linear-gradient(0deg, var(--spice-background), 92%, transparent);
 }
 
+.cover-art {
+    background: var(--spice-background);
+    border-radius: 7.5% 7.5% 0% 0%;
+}
 .cover-art-image {
-    opacity: 90%;
     border-radius: 7.5% 7.5% 0% 0%;
     transition: all 0.5s;
     cursor: pointer;
-}
-.cover-art-image:hover {
-    transition: all 0.5s;
-    opacity: 100%;
 }
 
 /* Album or song art */
@@ -42,53 +40,6 @@
     border-radius: 10%;
     opacity: 100;
     animation: both;
-}
-
-.main-buttonIcon-buttonIcon,
-.main-trackList-column,
-.main-rootlist-rootlistItem,
-.main-card-card,
-.main-entityHeader-smallHeader,
-.main-entityHeader-headerText,
-.main-entityHeader-image {
-    animation-name: up-fade-anim;
-    animation-duration: 1s;
-}
-.main-cardImage-image,
-.main-trackList-trackList,
-.main-trackList-number {
-    animation-name: left-fade-anim;
-    animation-duration: 1s;
-}
-@keyframes up-fade-anim {
-    from {
-        opacity:0%;
-        transform: translateY(10px);
-    }
-    to {
-        opacity:100;
-        transform: translateY(0px);
-    }
-}
-@keyframes left-fade-anim {
-    from {
-        opacity:0%;
-        transform: translateX(10px);
-    }
-    to {
-        opacity:100;
-        transform: translateX(0px);
-    }
-}
-@keyframes right-fade-anim {
-    from {
-        opacity:0%;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity:100;
-        transform: translateX(0px);
-    }
 }
 
 .main-entityHeader-imagePlaceholder {
@@ -116,7 +67,6 @@
 .main-topBar-background {
     opacity: 10%;
     background: linear-gradient(180deg, #171717, 60%, transparent) !important;
-    /* background */
     backdrop-filter: blur(5px);
     mask: linear-gradient(to bottom, #212121, 60%, transparent);
     transition: all 1s;
@@ -151,7 +101,6 @@
   border-radius: 4px;
   background-color: var(--spice-text);
   opacity: 30%;
-  backdrop-filter: blur(5px);
 }
 
 .player-controls__buttons {
@@ -240,4 +189,53 @@ input {
 
 .x-833-searchInput-searchInputSearchIcon {
     color: var(--spice-text) !important;
+}
+
+/* ANIMATIONS */
+
+.main-buttonIcon-buttonIcon,
+.main-trackList-column,
+.main-rootlist-rootlistItem,
+.main-card-card,
+.main-entityHeader-smallHeader,
+.main-entityHeader-headerText,
+.main-entityHeader-image {
+    animation-name: up-fade-anim;
+    animation-duration: 1s;
+}
+.main-cardImage-image,
+.main-trackList-trackList,
+.main-trackList-number {
+    animation-name: left-fade-anim;
+    animation-duration: 1s;
+}
+@keyframes up-fade-anim {
+    from {
+        opacity:0%;
+        transform: translateY(10px);
+    }
+    to {
+        opacity:100;
+        transform: translateY(0px);
+    }
+}
+@keyframes left-fade-anim {
+    from {
+        opacity:0%;
+        transform: translateX(10px);
+    }
+    to {
+        opacity:100;
+        transform: translateX(0px);
+    }
+}
+@keyframes right-fade-anim {
+    from {
+        opacity:0%;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity:100;
+        transform: translateX(0px);
+    }
 }
