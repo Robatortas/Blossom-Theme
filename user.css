@@ -9,12 +9,12 @@
 .main-actionBarBackground-background,
 .main-entityHeader-overlay,
 .main-entityHeader-backgroundColor {
-    background: linear-gradient(0deg, var(--spice-background) 10%, transparent) !important;
+    background: unset !important;
+    background-image: unset;
 }
 
 .main-trackList-trackListHeaderStuck {
     background: unset !important;
-    /* background */
     backdrop-filter: blur(5px);
     mask: linear-gradient(to bottom, #212121, 60%, transparent);
     transition: all 1s;
@@ -22,15 +22,17 @@
 
 /* Home Header, when on home tab */
 .main-home-homeHeader {
-    background-image: linear-gradient(0deg, var(--spice-background), 92%, transparent);
+    opacity: 40%;
+    background: radial-gradient(ellipse at top, var(--spice-button), 10%, var(--spice-main), 100%, transparent);
+    background-color: unset !important;
 }
 
 .cover-art {
     background: var(--spice-background);
-    border-radius: 7.5% 7.5% 0% 0%;
+    border-radius: 7.5%;
 }
 .cover-art-image {
-    border-radius: 7.5% 7.5% 0% 0%;
+    border-radius: 7.5%;
     transition: all 0.5s;
     cursor: pointer;
 }
@@ -40,10 +42,19 @@
     border-radius: 10%;
     opacity: 100;
     animation: both;
+    cursor: pointer;
+}
+
+.main-editImageButton-overlay {
+    border-radius: 10%;
+    background: unset;
+    backdrop-filter: blur(4px);
+    color: var(--spice-button);
+    transition: all 1s;
 }
 
 .main-entityHeader-imagePlaceholder {
-    background-color: aqua;
+    background-color: var(--spice-player);
 }
 
 .main-entityHeader-shadow {
@@ -54,7 +65,7 @@
 .main-nowPlayingBar-nowPlayingBar {
     background-color: unset !important;
     background: unset !important;
-    background-image: linear-gradient(0deg, var(--spice-player, 80%, transparent));
+    background-image: linear-gradient(0deg, var(--spice-player), 80%, transparent);
     transition: all 0.5s;
 }
 
@@ -91,7 +102,10 @@
     bottom: 67px;
     position: relative;
     cursor: pointer;
-    backdrop-filter: blur(3px);
+}
+.progress-bar {
+	--fg-color: var(--spice-button-active);
+    /* backdrop-filter: blur(3px); */
 }
 
 .os-theme-spotify.os-host-transition
@@ -109,6 +123,7 @@
 
 .main-playPauseButton-button {
     cursor: pointer;
+    border-radius: 10px;
     --button-size: 50px !important;
 }
 
@@ -124,11 +139,8 @@
 /* LEFT BAR STUFF */
 
 /* Playlists text color */
+.main-rootlist-rootlistDivider,
 .main-rootlist-rootlistDividerGradient {
-    visibility: hidden;
-}
-
-.main-rootlist-rootlistDivider {
     visibility: hidden;
 }
 
@@ -143,19 +155,34 @@
 }
 .main-rootlist-rootlistItem:hover {
     background: var(--spice-background) !important;
+    margin: 5px;
+    padding: 5px;
     transition: all 0.5s;
 }
 .main-rootlist-rootlistItemLinkActive {
+    background: var(--spice-background) !important;
+    /* margin: 2px 10px; */
+    margin-left: -22px;
+    margin-right: -50px;
+    padding-left: 30px;
+    transition: all 0.5s;
+}
+
+.main-navBar-navBarItem {
+    cursor: pointer;
+    margin: 0px;
+    transition: all 0.5s;
+}
+.main-navBar-navBarItem:hover {
+    background-color: var(--spice-player) !important;
+    transition: all 0.5s;
+}
+.main-navBar-navBarLinkActive{
     margin: 3px 10px;
     transition: all 0.5s;
 }
 
 /* CARDS */
-
-.maim-card-defaultPlaceholder {
-    /* opacity: 10%; */
-    background: radial-gradient(ellipse at top, #ffffff, transparent);
-}
 
 /* Little filter for the cards */
 .main-card-card {
@@ -193,6 +220,7 @@ input {
 
 /* ANIMATIONS */
 
+.main-heroCard-card,
 .main-buttonIcon-buttonIcon,
 .main-trackList-column,
 .main-rootlist-rootlistItem,
@@ -203,12 +231,18 @@ input {
     animation-name: up-fade-anim;
     animation-duration: 1s;
 }
+.main-shelf-seeAll,
 .main-cardImage-image,
 .main-trackList-trackList,
 .main-trackList-number {
     animation-name: left-fade-anim;
     animation-duration: 1s;
 }
+.main-shelf-title {
+    animation-name: right-fade-anim;
+    animation-duration: 1s;
+}
+
 @keyframes up-fade-anim {
     from {
         opacity:0%;
@@ -232,7 +266,7 @@ input {
 @keyframes right-fade-anim {
     from {
         opacity:0%;
-        transform: translateX(-20px);
+        transform: translateX(-10px);
     }
     to {
         opacity:100;
