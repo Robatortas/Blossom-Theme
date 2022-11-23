@@ -5,6 +5,7 @@
     background-color: var(--spice-background);
 }
 
+
 /* header colored backgrounds */
 .main-actionBarBackground-background,
 .main-entityHeader-overlay,
@@ -59,7 +60,16 @@
 
 .main-entityHeader-shadow {
     box-shadow: 0 0px 50px rgba(0, 0, 0, 0.200);
-  }
+}
+
+/* TRACKLIST */
+.main-trackList-playingIcon {
+    filter: hue-rotate(100deg);
+}
+
+.main-trackList-trackListRow:hover {
+    background-color: var(--spice-player);
+}
 
 /* Playback bar and controls */
 .main-nowPlayingBar-nowPlayingBar {
@@ -159,7 +169,6 @@
 }
 .main-rootlist-rootlistItemLinkActive {
     background: var(--spice-background) !important;
-    /* margin: 2px 10px; */
     margin-left: -22px;
     margin-right: -10px;
     padding-left: 30px;
@@ -177,7 +186,6 @@
 }
 .main-navBar-navBarLinkActive{
     background: var(--spice-player) !important;
-    /* margin: 2px 10px; */
     margin-left: -22px;
     margin-right: -10px;
     padding-left: 30px;
