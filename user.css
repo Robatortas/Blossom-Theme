@@ -67,8 +67,14 @@
     filter: hue-rotate(100deg);
 }
 
+.main-trackList-trackListRow {
+    margin-left: 0px;
+    transition: all 0.5s;
+}
 .main-trackList-trackListRow:hover {
     background-color: var(--spice-player);
+    margin-left: 10px;
+    transition: all 0.5s;
 }
 
 /* Playback bar and controls */
