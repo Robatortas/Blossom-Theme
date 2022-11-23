@@ -163,7 +163,7 @@
     background: var(--spice-background) !important;
     /* margin: 2px 10px; */
     margin-left: -22px;
-    margin-right: -50px;
+    margin-right: -10px;
     padding-left: 30px;
     transition: all 0.5s;
 }
@@ -178,7 +178,11 @@
     transition: all 0.5s;
 }
 .main-navBar-navBarLinkActive{
-    margin: 3px 10px;
+    background: var(--spice-player) !important;
+    /* margin: 2px 10px; */
+    margin-left: -22px;
+    margin-right: -10px;
+    padding-left: 30px;
     transition: all 0.5s;
 }
 
