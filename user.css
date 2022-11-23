@@ -97,15 +97,18 @@
 }
 
 .playback-bar {
-    float: left;
-    width: 100vw;
+    width: 102vw;
+    left: -25px;
     bottom: 67px;
     position: relative;
     cursor: pointer;
 }
+.main-playbackBarRemainingTime-container {
+    position: absolute;
+    visibility: hidden;
+}
 .progress-bar {
 	--fg-color: var(--spice-button-active);
-    /* backdrop-filter: blur(3px); */
 }
 
 .os-theme-spotify.os-host-transition
@@ -130,11 +133,6 @@
 .player-controls__buttons {
     align-items: center;
   }
-
-.main-playbackBarRemainingTime-container {
-  position: relative;
-  top: 100px;
-}
 
 /* LEFT BAR STUFF */
 
@@ -196,7 +194,24 @@
     transition: all 1s;
 }
 .main-card-card:hover {
-    opacity: 100%;
+    background-color: unset !important;
+    background: var(--spice-player)!important;
+}
+
+input {
+    background-color: unset !important;
+    border-bottom: solid 2px var(--spice-text) !important;
+    border-radius: 0 !important;
+    color: var(--spice-text) !important;
+  }
+
+/* Shortcuts */
+.view-homeShortcutsGrid-shortcut {
+    background-color: unset !important;
+    background: linear-gradient(180deg, var(--spice-player), 65.0%, transparent);
+    transition: all 1s;
+}
+.view-homeShortcutsGrid-shortcut:hover {
     background-color: unset !important;
     background: var(--spice-player)!important;
 }
@@ -276,4 +291,9 @@ input {
         opacity:100;
         transform: translateX(0px);
     }
+}
+
+.queue-tabBar-active {
+    background-color: var(--spice-player) !important;
+    transition: all 0.5s;
 }
