@@ -12,3 +12,5 @@ Listen to your music without issues.
 USE SPICETIFY FOR THIS THEME TO WORK!
 
 link to their amazing repo: https://github.com/spicetify/spicetify-cli
+
+And their website: https://spicetify.app/
