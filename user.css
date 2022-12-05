@@ -5,6 +5,16 @@
     background-color: var(--spice-background);
 }
 
+/* SEARCH */
+.main-yourEpisodes-episodeCard {
+    background-color: red;
+    transform: translateX(100px);
+}
+
+.x-searchInput-searchInputSearchIcon,
+.x-searchInput-searchInputClearButton {
+    color: var(--spice-button) !important;
+}
 
 /* header colored backgrounds */
 .main-actionBarBackground-background,
@@ -181,6 +191,29 @@
     transition: all 0.5s;
 }
 
+
+.lyrics-lyrics-contentWrapper {
+    opacity: 100%;
+}
+.lyrics-lyrics-contentContainer {
+    /* background: var(--spice-background) !important; */
+    position: relative;
+    background: var(--spice-player)
+}
+.lyrics-lyricsContent-highlight {
+    color: red !important;
+    background-color: red !important;
+    background: red !important;
+}
+
+.x-categoryCard-CategoryCard {
+    transition: all 0.5s;
+}
+.x-categoryCard-CategoryCard:hover {
+    margin-top: -2%;
+    transition: all 0.5s;
+}
+
 .main-navBar-navBarItem {
     cursor: pointer;
     margin: 0px;
@@ -212,12 +245,15 @@
     background: var(--spice-player)!important;
 }
 
-input {
+.collection-collectionEntityHeroCard-likedSongs {
     background-color: unset !important;
-    border-bottom: solid 2px var(--spice-text) !important;
-    border-radius: 0 !important;
-    color: var(--spice-text) !important;
-  }
+    background: linear-gradient(180deg, var(--spice-player), 65.0%, transparent);
+    transition: all 1s;
+}
+.collection-collectionEntityHeroCard-likedSongs:hover {
+    background-color: unset !important;
+    background: var(--spice-player)!important;
+}
 
 /* Shortcuts */
 .view-homeShortcutsGrid-shortcut {
@@ -253,6 +289,7 @@ input {
 
 /* ANIMATIONS */
 
+.view-homeShortcutsGrid-shortcut
 .main-heroCard-card,
 .main-buttonIcon-buttonIcon,
 .main-trackList-column,
